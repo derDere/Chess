@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
-//[ExecuteInEditMode]
+[ExecuteInEditMode]
 public class FieldGenerator : MonoBehaviour
 {
     [Header("Model")]
@@ -13,6 +14,9 @@ public class FieldGenerator : MonoBehaviour
 
     // Use this for initialization
     void Start () {
+        foreach(Transform t in transform) {
+            DestroyImmediate(t.gameObject);
+        }
         for (int x = 0; x < 8; x++)
         {
             for (int z = 0; z < 8; z++)
