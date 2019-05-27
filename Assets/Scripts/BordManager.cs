@@ -208,7 +208,7 @@ public class BordManager : MonoBehaviour {
         if(Field[x,y] != null)
         {
             if (SelectionObj == null) SelectionObj = Instantiate(Selection);
-            SelectionObj.transform.position = new Vector3(x * 3, 0, y * 3);
+            SelectionObj.transform.position = new Vector3(x * 3, 1, y * 3);
             CurrentSelection = new Vector2(x, y);
             Field[x, y].isSelected = true;
         }
